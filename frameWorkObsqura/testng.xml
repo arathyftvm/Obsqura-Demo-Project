@@ -4,8 +4,16 @@
   <test thread-count="5" name="Test">
 	<parameter name="browser" value="chrome"/>
 	<classes>
-            <class name="tests.TableTest">
-             </class>
+             <class name="tests.AjaxformSubmission"></class>  		 	
+	<class name="tests.DragandDropTest"></class> 	
+	<class name="tests.FormSubmitWithoutTermsAndCondition"></class>   	
+	<class name="tests.FortmSubmitValidationclass"></class>   			
+	<class name="tests.GenterRadioButton"></class>   	   	
+	<class name="tests.Javascriptpromptalert"></class>			
+	<class name="tests.JqueryUIProgressBar"></class>		
+	<class name="tests.ObsquraZoneConnectPageOpenVerfication"></class>
+	<class name="tests.SimpleFormVerficationTest"></class>
+	<class name="tests.TableTest"></class>
         </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
