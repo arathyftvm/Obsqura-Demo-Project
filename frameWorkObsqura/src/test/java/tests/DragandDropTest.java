@@ -21,13 +21,10 @@ public class DragandDropTest extends DriverIntializer {
 	 //OthersPage other;
 	 DragandDrop drag;
 		
-	 @BeforeMethod
-	 public void run(){
-	   driver=getDriver();
-	  }
 		
 	 @Test
-	 public void verify()throws InvocationTargetException {
+	 public void dragandDropverify()throws InvocationTargetException {
+		 driver=getDriver();
 	  main=new HomePage(driver);
 	  main.otherMenuClick();
 	  //other=new OthersPage(driver);

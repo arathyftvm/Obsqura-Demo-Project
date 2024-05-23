@@ -20,8 +20,6 @@ public class SimpleFormVerficationTest extends DriverIntializer{
 	InputForm inputform;
 	SimpleFormDemoPage simpledemo;
 	String achualMsg="Your Message : PageObject Factory";
-	//
-	//@Test(priority=1,retryAnalyzer =util.RetryAnalyzer.class)
 	@Test
 	@Parameters({"browser"})
 		public void simpleFormVerify() throws IOException
@@ -38,14 +36,7 @@ public class SimpleFormVerficationTest extends DriverIntializer{
 			Assert.assertEquals(achualMsg,expectedMessage);
 			ScreenShot s=new ScreenShot();
 			s.takeScreenShotMethod(driver,"simpleFormVerify");
-			ExtentReportClass report=new ExtentReportClass();
-			report.generateReports();
-			report.createTest("simpleFormVerify");
-			//report.createExtentReports();
-			report.loginfo("entering test");
-			report.logpass("test passed");
-			report.logfail("test failed");
-			report.flush();
+			
 		}
 	}
 	

@@ -37,10 +37,6 @@ public class TableTest extends DriverIntializer{
 		age=excelUtil.getIntegerData(1, 3);
 		startDay= excelUtil.getStringData(1, 4);
 		salary= excelUtil.getStringData(1, 5);
-	}	
-	@Test(priority = 2)
-	public void toGetRowNumber()
-	{
 		driver=getDriver();
 		homePage=new HomePage(driver);
 		homePage.tableClick();
@@ -48,11 +44,6 @@ public class TableTest extends DriverIntializer{
 		table.clickTableWithPagination();
 		tableWithPagination=new TableWithPagination(driver);
 		rowNumber=tableWithPagination.getRowNumber(name);	
-	}	
-	
-	@Test(priority = 3)
-	public void verifyTable() throws IOException
-	{
 		SoftAssert soft = new SoftAssert();
 		String currentPosition=tableWithPagination.getCurrentPosition(position, rowNumber);
 		soft.assertEquals(currentPosition, position);
@@ -65,12 +56,6 @@ public class TableTest extends DriverIntializer{
 		soft.assertAll();
 		ScreenShot s=new ScreenShot();
 		s.takeScreenShotMethod(driver,"simpleFormVerify");
-		ExtentReportClass report=new ExtentReportClass();
-		report.generateReports();
-		report.createTest("TableTesting");
-		report.loginfo("entering test");
-		report.logpass("test passed");
-		report.logfail("test failed");
-		report.flush();
+		
 	}
 }

@@ -31,23 +31,13 @@ public void ObsquraZoneConnectPageOpenVerficationtest() throws IOException{
 	    windowhanle=new WindowHandle();
 		windowhanle.childwindowSwitch(driver);
 		popup=new WindowPopPage(driver);
-		popup.likeUsOnFacebookButtonClick();
-		//popup.emailidforpopupEnter();
-		//popup.passwordforpopupEnter();
-		
+		popup.likeUsOnFacebookButtonClick();		
 		if(isSelectedCheck=popup.likeUsOnFacebookButton.isSelected()==true) {
 			Assert.assertTrue(true);
 		}
 		
 		ScreenShot s=new ScreenShot();
 		s.takeScreenShotMethod(driver,"ObsquraZoneConnectPageOpenVerficationtest");
-		/*ExtentReportClass report=new ExtentReportClass();
-		report.generateReports();
-		report.createExtentReports();
-		report.createTest("simpleFormVerify");
-		report.loginfo("entering test");
-		report.logpass("test passed");
-		report.logfail("test failed");
-		report.flush();*/
+		
 }
 }

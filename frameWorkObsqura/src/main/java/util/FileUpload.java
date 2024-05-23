@@ -18,7 +18,6 @@ public void robotUpload() throws AWTException
     Robot robot = new Robot();
     StringSelection stringSelection = new StringSelection(filePath);
     Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
-   // driver.findElement(By.xpath("")).click();
     robot.keyPress(KeyEvent.VK_CONTROL);
     robot.keyPress(KeyEvent.VK_V);
     robot.keyRelease(KeyEvent.VK_V);

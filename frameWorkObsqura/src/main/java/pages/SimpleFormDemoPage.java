@@ -29,7 +29,6 @@ public class SimpleFormDemoPage {
 	public void clickShowMsg()
 	{
 		showMessageButton.click();
-		//showMessageButton.sendKeys(keys.);
 	}
 	public String messageCheck()
 	{
